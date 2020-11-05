@@ -7,8 +7,6 @@
 import json
 import os
 import threading
-import inspect
-import ctypes
 import logging
 import time
 
@@ -21,13 +19,6 @@ if version == 2:
 
 if version == 3:
     from .python_3x import *
-
-# logging.basicConfig()
-logging.basicConfig(
-    format="%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s",
-    datefmt="%d-%m-%Y:%H:%M:%S",
-    level=logging.DEBUG,
-)
 
 
 class ApolloClient(object):
